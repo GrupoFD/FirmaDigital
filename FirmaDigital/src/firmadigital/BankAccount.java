@@ -15,7 +15,7 @@ import java.util.Calendar;
 public class BankAccount {
  
     private int id;
-    private Client client;
+    private Person client;
     private Bank bank;
     private Currency currency;
     private int amount;
@@ -26,7 +26,7 @@ public class BankAccount {
     public BankAccount() {
     }
 
-    public BankAccount(int id, Client client, Bank bank, Currency currency, int amount, ArrayList<Transaction> listOfTransactions, Calendar registeredDate, Calendar expirationDate) {
+    public BankAccount(int id, Person client, Bank bank, Currency currency, int amount, ArrayList<Transaction> listOfTransactions, Calendar registeredDate, Calendar expirationDate) {
         this.id = id;
         this.client = client;
         this.bank = bank;
@@ -45,11 +45,11 @@ public class BankAccount {
         this.id = id;
     }
 
-    public Client getClient() {
+    public Person getClient() {
         return client;
     }
 
-    public void setClient(Client client) {
+    public void setClient(Person client) {
         this.client = client;
     }
 

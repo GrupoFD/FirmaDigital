@@ -12,7 +12,7 @@ import java.util.Calendar;
  *
  * @author Soler
  */
-public class Legal extends Client{
+public class Legal extends Person{
     
     private String responsible;
 
