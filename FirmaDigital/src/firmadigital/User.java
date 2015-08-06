@@ -12,17 +12,30 @@ import java.util.ArrayList;
  * @author Soler
  */
 public class User {
-    
-    protected String name;
-    protected Certificate certificate;
-    protected ArrayList<Documents> documents;
-    protected ArrayList<BankAccount> bankAccount;
 
-    public User(String name, Certificate certificate, ArrayList<Documents> documents, ArrayList<BankAccount> bankAccount) {
+    protected int id;
+    protected String name;
+    protected String password;
+    protected int salary;
+    protected String workShift;
+
+    public User() {
+    }
+
+    public User(int id, String name, String passwprd, int salary, String workShift) {
+        this.id = id;
         this.name = name;
-        this.certificate = certificate;
-        this.documents = documents;
-        this.bankAccount = bankAccount;
+        this.password = password;
+        this.salary = salary;
+        this.workShift = workShift;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -33,36 +46,35 @@ public class User {
         this.name = name;
     }
 
-    public Certificate getCertificate() {
-        return certificate;
+    public String getPasswprd() {
+        return password;
     }
 
-    public void setCertificate(Certificate certificate) {
-        this.certificate = certificate;
+    public void setPasswprd(String passwprd) {
+        this.password = passwprd;
     }
 
-    public ArrayList<Documents> getDocuments() {
-        return documents;
+    public int getSalary() {
+        return salary;
     }
 
-    public void setDocuments(ArrayList<Documents> documents) {
-        this.documents = documents;
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 
-    public ArrayList<BankAccount> getBankAccount() {
-        return bankAccount;
+    public String getWorkShift() {
+        return workShift;
     }
 
-    public void setBankAccount(ArrayList<BankAccount> bankAccount) {
-        this.bankAccount = bankAccount;
+    public void setWorkShift(String workShift) {
+        this.workShift = workShift;
     }
 
     @Override
     public String toString() {
-        return "User{" + "name=" + name + ", certificate=" + certificate + ", documents=" + documents + ", bankAccount=" + bankAccount + '}';
+        return "User{" + "id=" + id + ", name=" + name + ", password=" + password + ", salary=" + salary + ", workShift=" + workShift + '}';
     }
-    
-    
-    
+
     
 }
+

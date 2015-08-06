@@ -9,6 +9,6 @@ package firmadigital;
  *
  * @author Soler
  */
-public class Certificate {
+public class Transaction {
     
 }

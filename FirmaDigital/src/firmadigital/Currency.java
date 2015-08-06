@@ -9,6 +9,6 @@ package firmadigital;
  *
  * @author Soler
  */
-public class Documents {
+public class Currency {
     
 }

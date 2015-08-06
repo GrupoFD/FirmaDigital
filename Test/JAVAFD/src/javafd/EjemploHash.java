@@ -32,7 +32,7 @@ public class EjemploHash {
         
         /* Crear función resumen */
         //MessageDigest messageDigest = MessageDigest.getInstance("MD5"); // Usa MD5
-        MessageDigest messageDigest = MessageDigest.getInstance("SHA"); // Usar SHA-1
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA-1"); // Usar SHA-1
 
         /* Leer fichero de 1k en 1k y pasar fragmentos leidos a la funcion resumen */
         byte[] buffer = new byte[1000];
