@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package firmadigital;
+package com.easybanking.banking;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -17,8 +17,8 @@ public class BankAccount {
     private int id;
     private Person client;
     private Bank bank;
-    private Currency currency;
-    private int amount;
+    private int currency;
+    private double amount;
     private ArrayList<Transaction> listOfTransactions;
     private Calendar registeredDate;
     private Calendar expirationDate;
@@ -26,7 +26,7 @@ public class BankAccount {
     public BankAccount() {
     }
 
-    public BankAccount(int id, Person client, Bank bank, Currency currency, int amount, ArrayList<Transaction> listOfTransactions, Calendar registeredDate, Calendar expirationDate) {
+    public BankAccount(int id, Person client, Bank bank, int currency, int amount, ArrayList<Transaction> listOfTransactions, Calendar registeredDate, Calendar expirationDate) {
         this.id = id;
         this.client = client;
         this.bank = bank;
@@ -61,19 +61,19 @@ public class BankAccount {
         this.bank = bank;
     }
 
-    public Currency getCurrency() {
+    public int getCurrency() {
         return currency;
     }
 
-    public void setCurrency(Currency currency) {
+    public void setCurrency(int currency) {
         this.currency = currency;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 

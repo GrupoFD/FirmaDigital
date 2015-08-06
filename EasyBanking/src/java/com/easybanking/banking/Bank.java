@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package firmadigital;
+package com.easybanking.banking;
+
+import java.util.ArrayList;
 
 /**
  *
@@ -15,6 +17,9 @@ public class Bank {
     private String name;
     private String country;
     private int phone;
+    private ArrayList<Person> listOfPersons;
+    private ArrayList<Transaction> listOfTransactions;
+    
 
     public Bank() {
     }

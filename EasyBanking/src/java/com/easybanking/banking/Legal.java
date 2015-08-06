@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package firmadigital;
+package com.easybanking.banking;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -16,14 +16,11 @@ public class Legal extends Person{
     
     private String responsible;
 
-    public Legal() {
-    }
-    
-    public Legal(String responsible, String id, String name, String password, String direction, Calendar birthDate, int phone, ArrayList<BankAccount> listOfAccounts) {
-        super(id, name, password, direction, birthDate, phone, listOfAccounts);
+    public Legal(String responsible, String id, String name, String password, String direction, Calendar birthDate, int phone) {
+        super(id, name, password, direction, birthDate, phone);
         this.responsible = responsible;
     }
-
+ 
     public String getResponsible() {
         return responsible;
     }

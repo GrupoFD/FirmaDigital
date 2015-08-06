@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package firmadigital;
+package com.easybanking.banking;
 
 /**
  *
@@ -16,8 +16,8 @@ public class Manager extends User{
     public Manager() {
     }
 
-    public Manager(int extraSalary, int id, String name, String passwprd, int salary, String workShift) {
-        super(id, name, passwprd, salary, workShift);
+    public Manager(int extraSalary, int id, String name, String password, int salary, String workShift) {
+        super(id, name, password, salary, workShift);
         this.extraSalary = extraSalary;
     }
 
