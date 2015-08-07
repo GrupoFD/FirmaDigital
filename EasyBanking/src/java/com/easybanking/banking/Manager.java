@@ -11,8 +11,10 @@ package com.easybanking.banking;
  */
 public class Manager extends User{
     
+    //Can create User Accounts and Clients 
+    
     private int extraSalary;
-
+    
     public Manager() {
     }
 

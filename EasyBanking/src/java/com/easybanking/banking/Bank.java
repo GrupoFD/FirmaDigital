@@ -18,9 +18,10 @@ public class Bank {
     private String country;
     private int phone;
     private ArrayList<Person> listOfPersons;
-    private ArrayList<Transaction> listOfTransactions;
     
-
+    
+    
+    
     public Bank() {
     }
 

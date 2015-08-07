@@ -15,8 +15,6 @@ import java.util.Calendar;
 public class BankAccount {
  
     private int id;
-    private Person client;
-    private Bank bank;
     private int currency;
     private double amount;
     private ArrayList<Transaction> listOfTransactions;
@@ -26,13 +24,11 @@ public class BankAccount {
     public BankAccount() {
     }
 
-    public BankAccount(int id, Person client, Bank bank, int currency, int amount, ArrayList<Transaction> listOfTransactions, Calendar registeredDate, Calendar expirationDate) {
+    public BankAccount(int id, int currency, int amount, Calendar registeredDate, Calendar expirationDate) {
+        
         this.id = id;
-        this.client = client;
-        this.bank = bank;
         this.currency = currency;
         this.amount = amount;
-        this.listOfTransactions = listOfTransactions;
         this.registeredDate = registeredDate;
         this.expirationDate = expirationDate;
     }
@@ -43,22 +39,6 @@ public class BankAccount {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Person getClient() {
-        return client;
-    }
-
-    public void setClient(Person client) {
-        this.client = client;
-    }
-
-    public Bank getBank() {
-        return bank;
-    }
-
-    public void setBank(Bank bank) {
-        this.bank = bank;
     }
 
     public int getCurrency() {
@@ -103,7 +83,7 @@ public class BankAccount {
 
     @Override
     public String toString() {
-        return "BankAccount{" + "id=" + id + ", client=" + client + ", bank=" + bank + ", currency=" + currency + ", amount=" + amount + ", listOfTransactions=" + listOfTransactions + ", registeredDate=" + registeredDate + ", expirationDate=" + expirationDate + '}';
+        return "BankAccount{" + "id=" + id +  ", currency=" + currency + ", amount=" + amount + ", listOfTransactions=" + listOfTransactions + ", registeredDate=" + registeredDate + ", expirationDate=" + expirationDate + '}';
     }
     
     
