@@ -5,7 +5,6 @@
  */
 package com.easybanking.banking;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
@@ -16,7 +15,7 @@ public class Legal extends Person{
     
     private String responsible;
 
-    public Legal(String responsible, String id, String name, String password, String direction, Calendar birthDate, int phone) {
+    public Legal(String id, String name, String password, String direction, Calendar birthDate, int phone, String responsible) {
         super(id, name, password, direction, birthDate, phone);
         this.responsible = responsible;
     }

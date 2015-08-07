@@ -12,7 +12,7 @@ import java.util.Calendar;
  *
  * @author Soler
  */
-public class Person {
+public abstract class Person {
     
     private String id;
     private String name;

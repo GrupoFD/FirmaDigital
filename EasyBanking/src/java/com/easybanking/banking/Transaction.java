@@ -9,75 +9,72 @@ import java.util.Calendar;
  */
 public class Transaction {
     
-    // Transacción existe básicamente para DOS RAZONES (por ahora)..!!
-    // PRIMERO,,, para que en el tester (un servlet?) exista un único objeto declarado de
-    // Transaccion miTransaccion... Cada vez que se haga una transacción, se llenan los atributos
-    // de este objeto y se usa alguno o algunos de sus métodos para llevar a cabo la transacción
-    // que sea... Y todos los resultados se almacenan en el objeto, quedando un record completo..!!!
-    // SEGUNDA razón... Cada cuenta va a tener una lista de transacciones...
-    // (Según instrucción del Profe, Banco tiene lista de personas, Persona tiene lista de cuentas y Cuenta tiene lista de transacciones..!!!)
-    // Cada vez que se llena y completa un objeto transacción mediante la razón PRIMERA,
-    // mediante un add, se mete el registro de la transacción en la lista de transacciones de la cuenta ACTIVA...
+//     Transacción existe básicamente para DOS RAZONES (por ahora)..!!
+//     PRIMERO,,, para que en el tester (un servlet?) exista un único objeto declarado de
+//     Transaccion miTransaccion... Cada vez que se haga una transacción, se llenan los atributos
+//     de este objeto y se usa alguno o algunos de sus métodos para llevar a cabo la transacción
+//     que sea... Y todos los resultados se almacenan en el objeto, quedando un record completo..!!!
+//     SEGUNDA razón... Cada cuenta va a tener una lista de transacciones...
+//     (Según instrucción del Profe, Banco tiene lista de personas, Persona tiene lista de cuentas y Cuenta tiene lista de transacciones..!!!)
+//     Cada vez que se llena y completa un objeto transacción mediante la razón PRIMERA,
+//     mediante un add, se mete el registro de la transacción en la lista de transacciones de la cuenta ACTIVA...
+//    
+//     Cuenta activa es la cuenta del que hace una transacción
+//     Cuenta pastiva es la cuenta de una persona registrada que recibe una transacción (como recibir una transferencia)
+//     userActive es el que saca dinero y lo mete en la cuenta de otro...
+//     userPasive es el que, sin hacer nada, recibe dinero...
+//    
+//     Tipo de transacción se almacena en la variable typeOfTransaccion: 1 = deposito, 2 = retiro, 3 = transferencia...
     
-    // Cuenta activa es la cuenta del que hace una transacción
-    // Cuenta pastiva es la cuenta de una persona registrada que recibe una transacción (como recibir una transferencia)
-    // userActive es el que saca dinero y lo mete en la cuenta de otro...
-    // userPasive es el que, sin hacer nada, recibe dinero...
+//    private Person userActive;
+//    private Person userPasive;
+//    private BankAccount accountActive;
+//    private BankAccount accountPassive;
+//    private int typeOfTransaction; 
+//    No lo ocupamos porq ya viene desde BANKACCOUNT 
     
-    // Tipo de transacción se almacena en la variable typeOfTransaccion: 1 = deposito, 2 = retiro, 3 = transferencia...
-    
-    private Person userActive;
-    private Person userPasive;
-    private BankAccount accountActive;
-    private BankAccount accountPassive;
     private Calendar timeStamp;
-    private int typeOfTransaction;
     private double amountOfTransaction;
 
     public Transaction() {
     }
 
-    public Transaction(Person userActive, Person userPasive, BankAccount accountActive, BankAccount accountPassive, Calendar timeStamp, int typeOfTransaction, double amountOfTransaction) {
-        this.userActive = userActive;
-        this.userPasive = userPasive;
-        this.accountActive = accountActive;
-        this.accountPassive = accountPassive;
-        this.timeStamp = timeStamp;
-        this.typeOfTransaction = typeOfTransaction;
-        this.amountOfTransaction = amountOfTransaction;
+    public Transaction(Calendar timeStamp, double amountOfTransaction) {
+             this.timeStamp = timeStamp;
+          this.amountOfTransaction = amountOfTransaction;
     }
 
-    public Person getUserActive() {
-        return userActive;
-    }
-
-    public void setUserActive(Person userActive) {
-        this.userActive = userActive;
-    }
-
-    public Person getUserPasive() {
-        return userPasive;
-    }
-
-    public void setUserPasive(Person userPasive) {
-        this.userPasive = userPasive;
-    }
-
-    public BankAccount getAccountActive() {
-        return accountActive;
-    }
-
-    public void setAccountActive(BankAccount accountActive) {
-        this.accountActive = accountActive;
-    }
-
-    public BankAccount getAccountPassive() {
-        return accountPassive;
-    }
-
-    public void setAccountPassive(BankAccount accountPassive) {
-        this.accountPassive = accountPassive;
-    }
+//    public Person getUserActive() {
+//        return userActive;
+//    }
+//
+//    public void setUserActive(Person userActive) {
+//        this.userActive = userActive;
+//    }
+//
+//    public Person getUserPasive() {
+//        return userPasive;
+//    }
+//
+//    public void setUserPasive(Person userPasive) {
+//        this.userPasive = userPasive;
+//    }
+//
+//    public BankAccount getAccountActive() {
+//        return accountActive;
+//    }
+//
+//    public void setAccountActive(BankAccount accountActive) {
+//        this.accountActive = accountActive;
+//    }
+//
+//    public BankAccount getAccountPassive() {
+//        return accountPassive;
+//    }
+//
+//    public void setAccountPassive(BankAccount accountPassive) {
+//        this.accountPassive = accountPassive;
+//    }
 
     public Calendar getTimeStamp() {
         return timeStamp;
@@ -86,14 +83,14 @@ public class Transaction {
     public void setTimeStamp(Calendar timeStamp) {
         this.timeStamp = timeStamp;
     }
-
-    public int getTypeOfTransaction() {
-        return typeOfTransaction;
-    }
-
-    public void setTypeOfTransaction(int typeOfTransaction) {
-        this.typeOfTransaction = typeOfTransaction;
-    }
+//
+//    public int getTypeOfTransaction() {
+//        return typeOfTransaction;
+//    }
+//
+//    public void setTypeOfTransaction(int typeOfTransaction) {
+//        this.typeOfTransaction = typeOfTransaction;
+//    }
 
     public double getAmountOfTransaction() {
         return amountOfTransaction;

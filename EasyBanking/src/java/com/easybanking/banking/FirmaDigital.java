@@ -18,7 +18,7 @@ public class FirmaDigital {
      */
     public static void main(String[] args) {
 
-        Person p = new Person("123213", "Carlos", "213", "qwdqwd", Calendar.getInstance(), 123);
+        Person p = new Legal("123213", "Carlos", "213", "qwdqwd", Calendar.getInstance(), 123, "Carlos Perez");
         Bank easyBank = new Bank();
         BankAccount b = new BankAccount(123, 2, 1234, Calendar.getInstance(), Calendar.getInstance());
         //p.getlistOfBankAccounts().add(b);
